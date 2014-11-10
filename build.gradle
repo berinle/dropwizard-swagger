@@ -53,15 +53,15 @@ bintray {
     key = "$bintrayKey"
     publications = ['mavenJava']
 
-    dryRun = true //Whether to run this as dry-run, without deploying
-    publish = false //If version should be auto published after an upload
+    dryRun = false //Whether to run this as dry-run, without deploying
+    publish = true //If version should be auto published after an upload
 
     pkg {
         repo = 'maven'
         name = 'dropwizard-swagger'
         desc = 'Dropwizard integration with Wordnik Swagger'
-        websiteUrl = 'https://github.com:berinle/dropwizard-swagger'
-        issueTrackerUrl = 'https://github.com:berinle/dropwizard-swagger/issues'
+        websiteUrl = 'https://github.com/berinle/dropwizard-swagger'
+        issueTrackerUrl = 'https://github.com/berinle/dropwizard-swagger/issues'
         vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
         licenses = ['Apache-2.0']
         labels = ['dropwizard', 'swagger', 'rest']
