@@ -1,6 +1,8 @@
 package com.axemblr.dropwizard.swagger;
 
+import com.wordnik.swagger.config.ConfigFactory;
 import com.wordnik.swagger.config.ScannerFactory;
+import com.wordnik.swagger.config.SwaggerConfig;
 import com.wordnik.swagger.jaxrs.config.DefaultJaxrsScanner;
 import com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider;
 import com.wordnik.swagger.jaxrs.listing.ResourceListingProvider;
@@ -28,10 +30,11 @@ public class SwaggerBundle extends AssetsBundle {
         ScannerFactory.setScanner(new DefaultJaxrsScanner());
         ClassReaders.setReader(new DefaultJaxrsApiReader());
 
-        super.run(environment);
 
-//        SwaggerConfig config = ConfigFactory.config();
-//        config.setApiVersion("1.0.1");
-//        config.setBasePath("http://localhost:8000");
+        SwaggerConfig config = ConfigFactory.config();
+        config.setApiVersion("1.0");
+        config.setBasePath("..");
+
+        super.run(environment);
     }
 }

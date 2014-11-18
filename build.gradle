@@ -8,7 +8,7 @@ apply plugin: 'maven-publish'
 apply plugin: "com.jfrog.bintray"
 
 group = 'com.axemblr.dropwizard'
-version = '0.1.1'
+version = '0.1.2'
 
 description = "Dropwizard integration with Wordnik Swagger"
 
